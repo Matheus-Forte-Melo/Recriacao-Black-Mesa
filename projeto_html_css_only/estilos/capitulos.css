@@ -18,12 +18,13 @@ main {
 div.frame {
     background-image: url(../imagens/black_mesa_logo_h.png);
     /* background-size: cover; */
-    background-size: 100px;
+    background-size: 10vh;
     background-repeat: no-repeat;
     background-position: center center;
 
     width: 200px;
     height: 200px;
+    
     
 
     margin: 5px;
@@ -50,6 +51,19 @@ p {
     color: var(--cor-secundaria);
     text-align: center;
     margin-top: -20px;
+}
+
+/* Media Queries */
+
+@media screen and (max-height: 703px) {
+    p {
+        color: green;
+    }
+    
+    div.frame { /* Isso aqui salvou minha vida e eu nem direito porque, mas vamo bora. As vezes combinar medidas dinamicas e media queries dá bom aparentemnte */
+        width: 200px;
+        height: 100px;
+    }
 }
 
 /* Configs de Capitulos */
