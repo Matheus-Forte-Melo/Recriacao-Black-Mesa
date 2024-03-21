@@ -1,0 +1,131 @@
+body {
+    margin: 0px;
+    background-color: var(--cor-primaria);
+    font-family: "Black-Mesa";
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+main {
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    height: 300vh;
+}
+
+div.frame {
+    background-image: url(../imagens/black_mesa_logo_h.png);
+    /* background-size: cover; */
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 200px;
+    height: 200px;
+    
+
+    margin: 5px;
+
+    transition: 0.45s cubic-bezier(0.4, 0.84, 0.44, 1);
+    font-size: 1.2;
+    color: rgba(255, 255, 255, 0.639);
+}
+
+div.frame:hover {
+    background-image: url(../imagens/capitulos/teste.png);
+    background-position: center top;
+    background-size: contain; /* Talvez deixar contain */
+
+    box-sizing: border-box;  
+    
+    width: calc(+99.7%);
+    height: calc(+40%);
+    
+    transition: background-image 0.0s 0s, width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+p {
+    color: var(--cor-secundaria);
+    text-align: center;
+    margin-top: -20px;
+}
+
+/* Configs de Capitulos */
+
+div.frame#cap1:hover {
+    background-image: url(../imagens/capitulos/cap1_resumo.png);
+}
+
+div.frame#cap2:hover {
+    background-image: url(../imagens/capitulos/cap2_resumo.png);
+}
+
+div.frame#cap3:hover {
+    background-image: url(../imagens/capitulos/cap3_resumo.png);
+}
+
+div.frame#cap4:hover {
+    background-image: url(../imagens/capitulos/cap4_resumo.png);
+}
+
+div.frame#cap5:hover {
+    background-image: url(../imagens/capitulos/cap5_resumo.png);
+}
+
+div.frame#cap6:hover {
+    background-image: url(../imagens/capitulos/cap6_resumo.png);
+}
+
+div.frame#cap7:hover {
+    background-image: url(../imagens/capitulos/cap7_resumo.png);
+}
+
+div.frame#cap8:hover {
+    background-image: url(../imagens/capitulos/cap8_resumo.png);
+}
+
+div.frame#cap9:hover {
+    background-image: url(../imagens/capitulos/cap9_resumo.png);
+}
+
+div.frame#cap10:hover {
+    background-image: url(../imagens/capitulos/cap10_resumo.png);
+}
+
+div.frame#cap11:hover {
+    background-image: url(../imagens/capitulos/cap11_resumo.png);
+}
+
+div.frame#cap12:hover {
+    background-image: url(../imagens/capitulos/cap12_resumo.png);
+}
+
+div.frame#cap13:hover {
+    background-image: url(../imagens/capitulos/cap13_resumo.png);
+}
+
+div.frame#cap14:hover {
+    background-image: url(../imagens/capitulos/cap14_resumo.png);
+}
+
+div.frame#cap15:hover {
+    background-image: url(../imagens/capitulos/cap15_resumo.png);
+}
+
+div.frame#cap16:hover {
+    background-image: url(../imagens/capitulos/cap16_resumo.png);
+}
+
+div.frame#cap17:hover {
+    background-image: url(../imagens/capitulos/cap17_resumo.png);
+}
+
+div.frame#cap18:hover {
+    background-image: url(../imagens/capitulos/cap18_resumo.png);
+}
+
+div.frame#cap19:hover {
+    background-image: url(../imagens/capitulos/cap19_resumo.png);
+}

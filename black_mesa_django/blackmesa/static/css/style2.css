@@ -1,0 +1,8 @@
+h1 {
+    color: rebeccapurple;
+}
+
+h1:hover {
+    transition: 1s ease-in;
+    color: red;
+}
