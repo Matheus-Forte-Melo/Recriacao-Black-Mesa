@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulos</title>
     <link rel="stylesheet" href="estilos/capitulos.css">
+    <link rel="stylesheet" href="estilos/capitulos-imagens.css">
     <link rel="stylesheet" href="estilos/header.css">
 </head>
 <body>
@@ -23,8 +24,25 @@
             </nav>
        </div>
     </header>
-    <p>Passe o mouse por cima das logos da Black Mesa <strong>abaixo</strong> para ver os capítulos</p>
+    <div id="terminal_window">
+        <img src="imagens/black_mesa_logo_pixelated.png" alt="blackmesa">
+        <p>BRMF://bms/chaps.exe</p>
+        <div id="minimizar">-</div>
+        <div id="fechar">X</div>
+    </div>
     <main>
+        <p id="vconsole_start">
+            ************************************************ 
+            Start VCONSOLE Buffered Messages 
+            *********************************************
+            <br> ****************************************************************************************************************************
+            <br>
+        </p>
+        <p id="vconsole_messages">
+             - Loaded 19.chps files from 19 vcdlist files.
+            <br><br>
+            -> Enter File Input <span>|</span>
+        </p>
         <div class="frame" id="cap1">1</div>
         <div class="frame" id="cap2">2</div>
         <div class="frame" id="cap3">3</div>

@@ -1,3 +1,25 @@
+@font-face {
+    font-family: "Black-Mesa-Terminal";
+    src: url(../fontes/Good\ Old\ DOS.ttf) format(truetype);
+}
+
+@keyframes pisca-pisca {
+    0% {
+        visibility: visible; /* Começa o ciclo invisivel*/
+      }
+      50% {
+        visibility: visible; /* Metade do ciclo torna-se visivel*/
+      }
+      51% {
+        visibility: hidden; /* Logo depois fica invisivel denovo*/
+      }
+      100% {
+        visibility: hidden; /* Permanece invisivel até o final*/
+      }
+  }
+
+/* Começo dos estilos */
+
 body {
     margin: 0px;
     background-color: var(--cor-primaria);
@@ -5,141 +27,133 @@ body {
 }
 
 header {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+}
+
+div#terminal_window {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Black-Mesa-Terminal';
+    background-color: #525E3A;
+    height: 48px;
+    padding: 8px 8px 8px 8px;
+    
+    border-top: solid 1.5px #bbc3b9;
+    border-left: solid 1.5px #bbc3b9;
+    border-right: solid 2px #394227;
+    border-bottom: solid 2px #394227;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+div#terminal_window p {
+    display: block;
+    color: white;
+    margin: 8px 10px 10px 10px;
+
+    font-size: 1.8em;
+}
+
+div#minimizar, div#fechar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4em;
+    width: 50px;
+    height: 100%;
+    
+    color: #bbc3b9;
+    text-align: center;
+    background-color: #525E3A;
+    
+    border-top: solid 1.5px #bbc3b9;
+    border-left: solid 1.5px #bbc3b9;
+    border-right: solid 2px #394227;
+    border-bottom: solid 2px #394227;
+}
+
+div#minimizar {
+    margin-left: auto; /* Nao sabia que dava de fazer isso com margin-left ou margin-right */
+    margin-right: 15px;
 }
 
 main {
-    background-color: var(--cor-primaria);
+    background-color: black;
     display: flex;
     flex-direction: column;
     height: 300vh;
+
+    border-right: 8px solid #525E3A;
+    border-left: 8px solid #525E3A;
+    border-bottom: 8px solid #525E3A;
 }
 
+main p {
+    font-size: 1.3em;
+    font-family: "Black-Mesa-Terminal";
+}
+
+p#vconsole_start {
+    color: #C5BF3B;
+}
+
+p#vconsole_messages {
+    color: white;
+}
+
+p#vconsole_messages span{
+    animation: pisca-pisca 1s infinite;
+}
+
+
 div.frame {
-    background-image: url(../imagens/black_mesa_logo_h.png);
+    font-family: "Black-Mesa-Terminal";
+    color: white;
+    background-image: url(../imagens/black_mesa_logo_ascii.jpg);
+    filter: brightness(150%) contrast(120%);
     /* background-size: cover; */
-    background-size: 10vh;
+    background-size: 15vh;
     background-repeat: no-repeat;
     background-position: center center;
 
     width: 200px;
     height: 200px;
     
-    
-
     margin: 5px;
 
     transition: 0.45s cubic-bezier(0.4, 0.84, 0.44, 1);
     font-size: 1.2;
-    color: rgba(255, 255, 255, 0.639);
 }
 
 div.frame:hover {
-    background-image: url(../imagens/capitulos/teste.png);
-    background-position: center top;
     background-size: contain; /* Talvez deixar contain */
-
     box-sizing: border-box;  
     
-    width: calc(+99.7%);
-    height: calc(+40%);
+    width: calc(+99.6%); /* Aumenta 99.6% */
+    height: calc(+40%); /* Aumenta 40% */
     
-    transition: background-image 0.0s 0s, width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: filter 0.0s 0s, background-image 0.0s 0s, width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    filter: brightness(100%) contrast(100%);
 }
 
-p {
-    color: var(--cor-secundaria);
-    text-align: center;
-    margin-top: -20px;
-}
 
 /* Media Queries */
 
 @media screen and (max-height: 703px) {
-    p {
-        color: green;
-    }
     
-    div.frame { /* Isso aqui salvou minha vida e eu nem direito porque, mas vamo bora. As vezes combinar medidas dinamicas e media queries dá bom aparentemnte */
+    div.frame { /* Isso aqui salvou minha vida e eu nem sei direito porque, mas vamo bora. As vezes combinar medidas dinamicas no css og e media queries dá bom aparentemnte */
         width: 200px;
-        height: 100px;
+        height: 90px;
     }
 }
 
-/* Configs de Capitulos */
-
-div.frame#cap1:hover {
-    background-image: url(../imagens/capitulos/cap1_resumo.png);
-}
-
-div.frame#cap2:hover {
-    background-image: url(../imagens/capitulos/cap2_resumo.png);
-}
-
-div.frame#cap3:hover {
-    background-image: url(../imagens/capitulos/cap3_resumo.png);
-}
-
-div.frame#cap4:hover {
-    background-image: url(../imagens/capitulos/cap4_resumo.png);
-}
-
-div.frame#cap5:hover {
-    background-image: url(../imagens/capitulos/cap5_resumo.png);
-}
-
-div.frame#cap6:hover {
-    background-image: url(../imagens/capitulos/cap6_resumo.png);
-}
-
-div.frame#cap7:hover {
-    background-image: url(../imagens/capitulos/cap7_resumo.png);
-}
-
-div.frame#cap8:hover {
-    background-image: url(../imagens/capitulos/cap8_resumo.png);
-}
-
-div.frame#cap9:hover {
-    background-image: url(../imagens/capitulos/cap9_resumo.png);
-}
-
-div.frame#cap10:hover {
-    background-image: url(../imagens/capitulos/cap10_resumo.png);
-}
-
-div.frame#cap11:hover {
-    background-image: url(../imagens/capitulos/cap11_resumo.png);
-}
-
-div.frame#cap12:hover {
-    background-image: url(../imagens/capitulos/cap12_resumo.png);
-}
-
-div.frame#cap13:hover {
-    background-image: url(../imagens/capitulos/cap13_resumo.png);
-}
-
-div.frame#cap14:hover {
-    background-image: url(../imagens/capitulos/cap14_resumo.png);
-}
-
-div.frame#cap15:hover {
-    background-image: url(../imagens/capitulos/cap15_resumo.png);
-}
-
-div.frame#cap16:hover {
-    background-image: url(../imagens/capitulos/cap16_resumo.png);
-}
-
-div.frame#cap17:hover {
-    background-image: url(../imagens/capitulos/cap17_resumo.png);
-}
-
-div.frame#cap18:hover {
-    background-image: url(../imagens/capitulos/cap18_resumo.png);
-}
-
-div.frame#cap19:hover {
-    background-image: url(../imagens/capitulos/cap19_resumo.png);
+@media screen and (max-width: 1816px) {
+    p#vconsole_start {
+        display: none;
+    }
 }
