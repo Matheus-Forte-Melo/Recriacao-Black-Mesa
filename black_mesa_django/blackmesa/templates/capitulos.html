@@ -1,12 +1,14 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulos</title>
-    <link rel="stylesheet" href="estilos/capitulos.css">
-    <link rel="stylesheet" href="estilos/capitulos-imagens.css">
-    <link rel="stylesheet" href="estilos/header.css">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/capitulos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/capitulos-imagens.css' %}">
 </head>
 <body>
     <header>
@@ -25,7 +27,7 @@
        </div>
     </header>
     <div id="terminal_window">
-        <img src="imagens/black_mesa_logo_pixelated.png" alt="blackmesa">
+        <img src="{% static 'img/black_mesa_logo_pixelated.png' %}" alt="blackmesa">
         <p>BRMF://bms/chaps.exe</p>
         <div id="minimizar">-</div>
         <div id="fechar">X</div>

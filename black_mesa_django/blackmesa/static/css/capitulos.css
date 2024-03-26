@@ -1,6 +1,25 @@
 @font-face {
     font-family: "Black-Mesa-Terminal";
-    src: url(../fontes/Good\ Old\ DOS.ttf) format(truetype);
+    src: url(../fonts/Good\ Old\ DOS.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "Black-Mesa";
+    src: url(../fonts/Quantico-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "Black-Mesa_2";
+    src: url(../fonts/Sedan-Regular.ttf) format(truetype);
+}
+
+header div#logo {
+    background-color: var(--cor-primaria);
+    background-image: url(../img/black_mesa_logo_h.png);
+    background-position: center center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    width: 9%;
 }
 
 @keyframes pisca-pisca {
@@ -114,7 +133,7 @@ p#vconsole_messages span{
 div.frame {
     font-family: "Black-Mesa-Terminal";
     color: white;
-    background-image: url(../imagens/black_mesa_logo_ascii.jpg);
+    background-image: url(../img/black_mesa_logo_ascii.jpg);
     filter: brightness(150%) contrast(120%);
     /* background-size: cover; */
     background-size: 15vh;

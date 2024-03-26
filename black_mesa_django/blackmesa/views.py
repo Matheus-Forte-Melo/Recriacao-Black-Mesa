@@ -4,7 +4,7 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
 
-def enredo(request):
-    return render(request, 'enredo.html')
+def capitulos(request):
+    return render(request, 'capitulos.html')
 
 
