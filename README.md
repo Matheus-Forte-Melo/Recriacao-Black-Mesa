@@ -1,8 +1,15 @@
-<h1>Essa é uma recriação/reimaginação do website do game Black Mesa</h1>
+<h1>Recriação/reimaginação do website do game Black Mesa</h1> <br>
+
 Desenvolvi esse projeto para fins didáticos
+
+Gif de demonstração: https://i.imgur.com/kcqdRg3.gif
+
 <br>
 
-![Gif Website](https://i.imgur.com/E6uyGVQ.gif)
+![image](https://i.imgur.com/hTGIlhX.png)
+![image](https://i.imgur.com/6a5xMTY.png)
+![image](https://i.imgur.com/TGlghgs.png)
+![image](https://i.imgur.com/z6lph1P.png)
 
 <br>
 
